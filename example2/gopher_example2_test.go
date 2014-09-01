@@ -5,6 +5,7 @@ import (
 	"testing"
 )
 
+// Using goconvey to write test BDD style
 func TestGopherCanRun(t *testing.T) {
 	Convey("Given a gopher called Adam", t, func() {
 		g := Gopher{"Adam", 12}

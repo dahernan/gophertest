@@ -4,6 +4,11 @@ import (
 	"testing"
 )
 
+// Simple test using the standard tools
+// We're going to use GoConvey to run it
+// https://github.com/smartystreets/goconvey
+// 		$ go get github.com/smartystreets/goconvey
+// 		$ $GOPATH/bin/goconvey
 func TestGopherCanRun(t *testing.T) {
 
 	g := Gopher{"Adam", 12}
