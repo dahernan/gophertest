@@ -1,0 +1,7 @@
+* Code for the talk
+
+```
+$ $GOPATH/present
+
+http://localhost:3999/
+```

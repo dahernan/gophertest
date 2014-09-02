@@ -36,8 +36,7 @@ func TestRunAllUsesTheRightArguments(t *testing.T) {
 	Convey("Run all returns an error if some of the runners, return a error", t, func() {
 
 		runner := &SomeRunner{}
-		arg1 := "run all the things!"
-		runner.On("Run", arg1).Return("OK", nil)
+		runner.On("Run", "run all the things!").Return("OK", nil)
 
 		err := RunAll(runner)
 
