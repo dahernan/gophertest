@@ -1,6 +1,7 @@
 package example3
 
 import (
+	//"fmt"
 	. "github.com/smartystreets/goconvey/convey"
 	"testing"
 )
@@ -19,6 +20,7 @@ func TestConveyContextIsWorking(t *testing.T) {
 			gophers = append(gophers, tom)
 			Convey("then the slice should contain the gopher Tom", func() {
 				So(gophers[2].name, ShouldEqual, "Tom")
+
 			})
 		})
 
