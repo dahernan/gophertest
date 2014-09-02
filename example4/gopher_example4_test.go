@@ -3,7 +3,7 @@ package example4
 import (
 	"fmt"
 	. "github.com/smartystreets/goconvey/convey"
-	"github.com/stretchr/testify/mock"
+	//"github.com/stretchr/testify/mock"
 	"testing"
 )
 
@@ -23,24 +23,24 @@ func TestRunAllReturnsError(t *testing.T) {
 }
 
 // but is not easy  if you want to validate the arguments
-type SomeRunner struct {
-	mock.Mock
-}
+// type SomeRunner struct {
+// 	mock.Mock
+// }
 
-func (s *SomeRunner) Run(desc string) (string, error) {
-	args := s.Mock.Called(desc)
-	return args.String(0), args.Error(1)
-}
+// func (s *SomeRunner) Run(desc string) (string, error) {
+// 	args := s.Mock.Called(desc)
+// 	return args.String(0), args.Error(1)
+// }
 
-func TestRunAllUsesTheRightArguments(t *testing.T) {
-	Convey("Run all returns an error if some of the runners, return a error", t, func() {
+// func TestRunAllUsesTheRightArguments(t *testing.T) {
+// 	Convey("Run all returns an error if some of the runners, return a error", t, func() {
 
-		runner := &SomeRunner{}
-		runner.On("Run", "run all the things!").Return("OK", nil)
+// 		runner := &SomeRunner{}
+// 		runner.On("Run", "run all the things!").Return("OK", nil)
 
-		err := RunAll(runner)
+// 		err := RunAll(runner)
 
-		runner.Mock.AssertExpectations(t)
-		So(err, ShouldBeNil)
-	})
-}
+// 		runner.Mock.AssertExpectations(t)
+// 		So(err, ShouldBeNil)
+// 	})
+// }

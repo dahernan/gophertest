@@ -7,14 +7,17 @@ import (
 
 // Using goconvey to write test BDD style
 func TestGopherCanRun(t *testing.T) {
-	Convey("Given a gopher called Adam", t, func() {
-		g := Gopher{"Adam", 12}
-		Convey("When Adam Run", func() {
-			result, err := g.Run("fun!")
-			Convey("then Adam has fun", func() {
-				So(result, ShouldEqual, "I am Adam and I run for fun!")
-				So(err, ShouldBeNil)
-			})
-		})
-	})
+	g := Gopher{"Adam", 12}
+
+	result, err := g.Run("fun!")
+
+	if err != nil {
+		t.Errorf("Error %v when a gopher run", err)
+	}
+
+	expected := "I am Adam and I run for fun!"
+	if expected != result {
+		t.Errorf("actual = '%v', expected '%v'", result, expected)
+	}
+
 }

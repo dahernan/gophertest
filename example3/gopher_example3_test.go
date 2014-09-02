@@ -18,12 +18,9 @@ func TestConveyContextIsWorking(t *testing.T) {
 		Convey("append a new gopher in this context", func() {
 			tom := Gopher{"Tom", 1}
 			gophers = append(gophers, tom)
-			Convey("then the slice should contain the gopher Tom", func() {
-				So(gophers[2].name, ShouldEqual, "Tom")
 
-			})
 		})
 
-		So(len(gophers), ShouldEqual, 2)
+		// len(gophers)
 	})
 }

@@ -23,10 +23,7 @@ func (g Gopher) Run(desc string) (string, error) {
 
 func RunAll(runners ...Runner) error {
 	for _, runner := range runners {
-		_, err := runner.Run("run all the things!")
-		if err != nil {
-			return err
-		}
+		runner.Run("run all the things!")
 	}
 	return nil
 }
