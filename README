@@ -3,3 +3,26 @@ Talk an examples for the Go London User Group
 http://www.meetup.com/Go-London-User-Group/events/203467502/
 
 
+--
+
+Example 1:
+	- Gophers can Run
+	- Run with $ go test
+	- GoConvey to run the test and use the web UI
+		- Compile
+		- Test
+		- Code Coverage
+
+Example 2:
+	- Transform a normal test to a BDD test
+	- Use of the So(...) matchers
+
+Example 3:
+	- Use test in isolation
+	- Setup or Before test
+
+Example 4:
+	- Mocking using interfaces
+	- Mocking using testify
+	
+
